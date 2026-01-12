@@ -1,0 +1,44 @@
+{
+  "concepts": {
+    "고객": "customers",
+    "거래": "transactions",
+    "대출": "loans",
+    "고객번호": "cust_id",
+    "이름": "cust_nm",
+    "나이": "age",
+    "성별": "gender",
+    "등급": "grade_cd",
+    "가입일": "join_date",
+    "상품": "prod_cd",
+    "상품명": "prod_cd",
+    "거래유형": "tx_type",
+    "금액": "amt",
+    "거래일": "tx_date",
+    "통화": "curr_cd",
+    "대출유형": "loan_type",
+    "대출금액": "loan_amt",
+    "이자율": "interest_rate",
+    "시작일": "start_date",
+    "만기일": "end_date",
+    "고객등급": "grade_cd"
+  },
+  "codes": {
+    "정기예금": "0102001",
+    "보통예금": "0102002",
+    "신용대출": "0201001",
+    "담보대출": "0201002",
+    "VIP": "01",
+    "골드": "02",
+    "실버": "03",
+    "브론즈": "04",
+    "수입": "IN",
+    "수출": "OUT"
+  },
+  "metrics": {
+    "가입자수": "COUNT(DISTINCT cust_id)",
+    "고객수": "COUNT(DISTINCT cust_id)",
+    "총액": "SUM(amt)",
+    "평균금액": "AVG(amt)",
+    "평균이자율": "AVG(interest_rate)"
+  }
+}

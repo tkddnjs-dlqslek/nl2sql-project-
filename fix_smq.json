@@ -1,0 +1,21 @@
+{
+  "fixed_rules": [
+    {
+      "description": "금액 조회 시 항상 통화코드(curr_cd)를 포함함",
+      "target_metrics": ["총액", "평균금액"],
+      "add_dimensions": ["curr_cd"]
+    }
+  ],
+  "conditional_rules": [
+    {
+      "description": "대출 관련 질문 시 연체 여부를 확인하기 위해 만기일(end_date) 자동 추가",
+      "condition": "table == 'loans'",
+      "add_columns": ["end_date"]
+    },
+    {
+      "description": "수입/수출 언급이 없어도 거래 조회 시 기본적으로 수입(IN) 기준 필터 권장",
+      "condition": "table == 'transactions' and filters.tx_type == null",
+      "default_filter": {"tx_type": "IN"}
+    }
+  ]
+}
